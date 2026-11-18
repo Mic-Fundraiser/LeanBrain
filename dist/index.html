@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LeanBrain</title>
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script>try{const q=new URLSearchParams(location.hash.split('?')[1]||'').get('theme');const t=q||localStorage.getItem('leanbrain-theme');if(t)document.documentElement.dataset.theme=t;}catch{}</script>
+<script type="importmap">{"imports":{"three":"/three.module.js"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside id="sidebar">
+  <div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c-5 0-9 3.6-9 8.3 0 1.4.4 2.7 1 3.9-1.7 1.2-2.8 3.1-2.8 5.3 0 3.8 3.2 6.5 7 6.5h7.6c3.8 0 7-2.7 7-6.5 0-2.2-1.1-4.1-2.8-5.3.6-1.2 1-2.5 1-3.9C25 6.6 21 3 16 3z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v19M11 12h5M16 17h5M11 21h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>LeanBrain</span></div>
+  <nav aria-label="Sections">
+    <button data-view="overview"><i>◎</i><span>Overview</span></button>
+    <button data-view="projects"><i>▦</i><span>Projects</span></button>
+    <button data-view="memory"><i>◷</i><span>Memory</span></button>
+    <button data-view="insights"><i>✦</i><span>Insights</span></button>
+    <button data-view="usage"><i>▤</i><span>Agent usage</span></button>
+    <button data-view="savings"><i>⇣</i><span>Savings</span></button>
+    <button data-view="disk"><i>◫</i><span>Disk</span></button>
+    <button data-view="setup"><i>⚙</i><span>Setup</span></button>
+  </nav>
+  <div class="aside-foot"><span class="dot"></span><span>Local only · 127.0.0.1</span><button id="theme" aria-label="Toggle colour theme">◐</button></div>
+</aside>
+<main id="main" tabindex="-1">
+  <header class="topbar">
+    <div class="crumbs"><b id="crumb">Overview</b><span id="freshness"></span></div>
+    <div class="top-actions">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search projects, sessions, notes…  ( / )" autocomplete="off"></label>
+      <button id="sync" class="ghost" title="Read new agent sessions">Sync sessions</button>
+      <button id="rescan" class="primary" title="Scan folders again">Rescan</button>
+    </div>
+  </header>
+  <div id="view" class="view" aria-live="polite"></div>
+  <p id="status" role="status" class="status"></p>
+</main>
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-backdrop" data-close></div>
+  <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <header><div><h2 id="drawerTitle"></h2><p id="drawerSub"></p></div><button class="icon" data-close aria-label="Close">✕</button></header>
+    <div class="tabs" role="tablist" id="drawerTabs"></div>
+    <div id="drawerBody" class="drawer-body"></div>
+  </section>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

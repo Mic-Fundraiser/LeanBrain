@@ -1,0 +1,73 @@
+{
+  "name": "leanbrain",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node leanbrain.mjs serve",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node scripts/demo.mjs",
+    "screenshots": "sh scripts/screenshots.sh"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gpt-tokenizer": "4.1.2",
+    "three": "0.180.0"
+  },
+  "description": "The lean second brain for coding agents: persistent memory, an automatic token guard and insights (pause tax, immunity, déjà vu, collision radar) for Claude Code, Codex and Gemini CLI.",
+  "bin": {
+    "leanbrain": "./leanbrain.mjs"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-code-hooks",
+    "codex",
+    "codex-cli",
+    "gemini-cli",
+    "coding-agents",
+    "ai-agents",
+    "second-brain",
+    "ai-memory",
+    "agent-memory",
+    "context-engineering",
+    "token-optimization",
+    "token-usage",
+    "prompt-caching",
+    "llm-cost",
+    "mcp",
+    "mcp-server",
+    "repo-map",
+    "claude-md",
+    "agents-md",
+    "claude-opus-5-5",
+    "claude-fable-5-2",
+    "claude-sonnet-5-5",
+    "claude-haiku-5-5",
+    "gpt-6-2-astra",
+    "gpt-6-2-sol",
+    "local-first",
+    "developer-tools"
+  ],
+  "files": [
+    "leanbrain.mjs",
+    "atlante.mjs",
+    "lib/",
+    "dist/",
+    "scripts/",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mic-Fundraiser/LeanBrain.git"
+  },
+  "homepage": "https://github.com/Mic-Fundraiser/LeanBrain#readme",
+  "bugs": {
+    "url": "https://github.com/Mic-Fundraiser/LeanBrain/issues"
+  }
+}
